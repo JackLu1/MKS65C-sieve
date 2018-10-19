@@ -3,12 +3,20 @@
 #include <math.h>
 #include "sieve.h"
 
-int main(){
-    printf("%d", sieve(21234123));
-}
 /*
  * Finds nth prime
  */
-int sieve( int n ){
-    return n;
+int sieve( int targetPrime ){
+    double size = 1.15 * targetPrime * log(targetPrime);
+
+    //if (targetPrime < 5000){
+    //   size = 1.3 * targetPrime * log(targetPrime);
+    //}
+    //else{
+    //   size = 1.15 * targetPrime * log(targetPrime);
+    //}
+    printf("%f\n", size);
+    int * list = calloc( size, 4 );
+
+    return targetPrime;
 }

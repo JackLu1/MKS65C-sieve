@@ -5,10 +5,10 @@ run : all
 	./a.out 1000000
 
 sieve.o : sieve.c sieve.h
-	gcc -o sieve.c -lm
+	gcc -c sieve.c -lm
 
 driver.o : driver.c
-	gcc -o driver.c -lm
+	gcc -c driver.c
 
-clean : 
+clean :
 	rm *.o
