@@ -2,7 +2,7 @@ all : driver.o sieve.o sieve.h
 	gcc sieve.o driver.o -lm
 
 run : all
-	./a.out 1000000
+	./a.out $(args)
 
 sieve.o : sieve.c sieve.h
 	gcc -c sieve.c -lm
