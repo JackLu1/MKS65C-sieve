@@ -14,6 +14,7 @@ int main(int argc, char * argv[]){
 
     int ans = 0;
     while(iterations>0){
+        printf("TARTGET %d\n", target);
         ans=sieve(target);
         iterations--;
         printf("The n=%d prime is %d\n", target, ans );

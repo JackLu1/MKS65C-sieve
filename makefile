@@ -12,3 +12,10 @@ driver.o : driver.c
 
 clean :
 	rm *.o
+
+debug: driver.o sieve.o sieve.h
+	gcc -g sieve.o driver.o -lm
+	gdb ./a.out
+
+mem: all
+	valgrind --leak-check=yes ./a.out -v
